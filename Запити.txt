@@ -1,0 +1,4 @@
+SELECT * FROM hotels WHERE price0 > 5000;
+SELECT * FROM hotels INNER JOIN cities ON hotels.city_num = cities.id WHERE cities.name = 'Paris';
+SELECT * FROM hotels WHERE city_num IN (SELECT id FROM cities WHERE name = 'Paris' OR name = ' Berlin');
+SELECT avg(price0) FROM hotels GROUP BY city_num;
